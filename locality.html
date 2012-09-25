@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery Mobile | FIXMYTRANSPORT</title>
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
+ <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head>
+<body>
+
+<div data-role="page"><div class="ui-bar-a">
+ <div data-role="header"data-theme="theme.css" ><h1 style="text-align:left; margin-left:2px;">choose locality </h1></div>
+ </div>
+<img src="bus.png">
+
+
+<h2>UK Cities Names</h2>
+<script type="text/javascript">
+var cities={"A":[{name1:"Aberdeen"}],"B":[{"name1":"Birmingham","name2":"Bradford","name3":"Brighton & Hove","name4":"Bristol"}],
+"C":[{"name1":"Cambridge","name2":"Canterbury"}],"D":[{"name1":"Derby","name2":"Durham"}]}
+var i=0
+document.writeln("<br><b>Cities Starts In A</b>");
+document.writeln("<br>"+cities.A[i].name1);
+document.writeln("<br><b>Cities Starts In B</b>");
+for(i=0;i<cities.B.length;i++)
+{
+document.writeln("<br>"+cities.B[i].name1);
+ document.writeln("<br>"+cities.B[i].name2);
+document.writeln("<br>"+cities.B[i].name3);
+ document.writeln("<br>"+cities.B[i].name4);
+}
+document.writeln("<br><b>Cities Starts In C</b>");
+for(i=0;i<cities.C.length;i++)
+{
+document.writeln("<br>"+cities.C[i].name1);
+ document.writeln("<br>"+cities.C[i].name2);
+
+}
+document.writeln("<br><b>Cities Starts In D</b>");
+for(i=0;i<cities.D.length;i++)
+{
+document.writeln("<br>"+cities.D[i].name1);
+document.writeln("<br>"+cities.D[i].name2);
+
+}
+</script>
+<div class="ui-btn-up-a">
+    
+  <form class="ui-bar-a" action="geolocator.html" method="post" >
+   <input type="submit"   size="2" value="usemycurrentlocation" />
+  </form></div>
+<div data-role="footer"data-position="fixed">        
+     <div data-role="navbar">
+         <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="#">See Issues Near You</a></li>
+             
+         </ul>
+   </div>
+ </div>  
+
+</body>
+</html> 
