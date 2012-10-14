@@ -3,9 +3,9 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Google Maps JavaScript API v3 Example: Complex Icons</title>
+    <title>London Map</title>
     <link rel="stylesheet" href="map.css" />
-    <link rel="stylesheet" href="map1.css" />
+    
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
       function initialize() {
@@ -21,15 +21,15 @@
       }
 
       /**
-       * Data for the markers consisting of a name, a LatLng and a zIndex for
-       * the order in which these markers should display on top of each
-       * other.
-       */
+* Data for the markers consisting of a name, a LatLng and a zIndex for
+* the order in which these markers should display on top of each
+* other.
+*/
       var cities = [
         ['Westminster lat:51.498611600000000000,long:-0.128969699999970540',51.498611600000000000,-0.128969699999970540 , 2],
         ['Lambeth lat:51.4935082,long:-0.1178424', 51.4935082, -0.1178424, 2],
         ['Green park lat:51.506950,long:-0.142759999999952920', 51.506950000000000000 ,-0.142759999999952920 , 4],
-        ['Dalston lat:51.54500,long:-0.07000',51.54500,-0.07000,3],
+        ['Dalston lat:51.54500,long:-0.07000',51.54500,-0.07000,3]
       ];
 
       function setMarkers(map, locations) {
@@ -67,42 +67,28 @@
         };
         for (var i = 0; i < locations.length; i++) {
           var city = locations[i];
-          var myLatLng = new google.maps.LatLng(city[1], city[2]);
+          var myLatLng = new google.maps.LatLng(city[1],city[2]);
           var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
               shadow: shadow,
               icon: image,
               shape: shape,
+              url:'send-message.html',
               title: city[0],
               zIndex: city[3]
              
           });
+    google.maps.event.addListener(marker, 'click', function() {
+    window.location.href = marker.url;
+    marker.visible=true;
+});
         }
       }
     </script>
   </head>
   <body onload="initialize()">
     <div id="map_canvas">
-     </div>  
-  
-<a href="send-message.html">
-<div style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; right: 20px; top: 20px;" class="gmnoprint">
-<div style="float: left;">
-<div title="Go to next page" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 13px; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 1px 6px; border: 1px solid rgb(113, 123, 135); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); font-weight: bold; min-width: 29px;">Next Page</div>
-<div style="background-color: white; z-index: -1; padding-top: 2px; border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(113, 123, 135) rgb(113, 123, 135); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); position: absolute; left: 0px; top: 20px; text-align: left; display: none;">
-<div title="Show street map terrain" style="color: rgb(0, 0, 0); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 8px 3px 5px; direction: ltr; text-align: left; white-space: nowrap;">
-<span style="position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; box-shadow: none; vertical-align: middle;" role="checkbox">
-
-<div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img draggable="false" src="bus.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;">
-</div>
-</span>
-</a>
-</div>
-
-
-</div></div></div>
-
- 
+     </div>
   </body>
 </html>
