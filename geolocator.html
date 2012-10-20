@@ -10,7 +10,7 @@
     <script>
       function initialize() {
         var mapOptions = {
-          zoom: 10,
+          zoom: 14,
           center: new google.maps.LatLng(51.501904,-0.115871),
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
@@ -74,17 +74,19 @@
               shadow: shadow,
               icon: image,
               shape: shape,
-              url:'send-message.html',
+               url:'send-message.html',
               title: city[0],
               zIndex: city[3]
              
           });
-    google.maps.event.addListener(marker, 'click', function() {
+           google.maps.event.addListener(marker, 'click', function() {
     window.location.href = marker.url;
     marker.visible=true;
 });
-        }
-      }
+}
+}
+
+      
     </script>
   </head>
   <body onload="initialize()">

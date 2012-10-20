@@ -7,6 +7,7 @@
  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
  <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+ 
  </head>
   <body>
  <div data-role="page">
@@ -16,17 +17,30 @@
  <h1 style="text-align:left; margin-left:8px;">FIX MY TRANSPORT</h1>
  </div>
  </div>
+ <div id="msg"> <strong><font color="#CC3399">Smelly ferry?Bus didn't show up?Had a bad train journey?</font></strong></p> </div>
+<center><font color="#CC3399">Report your problem with a:</center></font>
+ <script type="text/javascript" >
+function blink(selector){
+$(selector).fadeOut('slow', function(){
+$(this).fadeIn('slow', function(){
+blink(this);
+});
+});
+}
+
+blink('#msg');
+</script>
   <h4>   
  <div data-role="navbar">
      <ul>
-         <li><a href="Enter-location.html" class="ui-btn-active">stop or station</a><p>Examples: poor facilities or accessibility,missing timetables,dirt or litter.</p></li>
-         <li><a href="index.html"class="ui-bar-a">journey or route</a><p>Examples: overcrowding,late buses or trains,fare and ticket problems.</p></li>
+         <li><a href="Enter-location.html" class="ui-btn-active">STOP or STATION</a><p>Examples: poor facilities or accessibility,missing timetables,dirt or litter.</p></li>
+         <li><a href="index.html"class="ui-bar-a">JOURNEY or ROUTE</a><p>Examples: overcrowding,late buses or trains,fare and ticket problems.</p></li>
      </ul>
  </div>    
 </h4>
  
-  
- <h5><center><b>Examples:</b>and we will help you get it fixed Or see issues near you.</center></h5>
+ 
+ <h5><center><b>Examples:</b>and we will send it to the company responsible Or see issues near you.</center></h5>
 
 <div data-role="footer"data-position="fixed">        
      <div data-role="navbar">
