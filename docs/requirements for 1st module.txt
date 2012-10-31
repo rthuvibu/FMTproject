@@ -1,0 +1,9 @@
+   1. As a transport user I want to report problems as well as see issues near me so that my transport operator can fix them.
+   2. As a transport user who wants to report problems, I want to be able to choose between stop/station or journey/route so that my report can be specific.
+   3. As a mobile user who wants to report problems about my stop or station I want my location captured automatically so that I don't have to spend time entering it.
+   4. As a mobile user who wants to report problems about my stop or station I want the option to enter an area, town or postcode so that I can report a problem about a different location.
+   5. As a transport user who entered an area or town, if there are many locations with the same name I want to be shown a list, so that I can pick one.
+   6. As a transport user who entered an area, town or postcode, I want to be shown a map with all the stops/stations in that area, town or postcode, so that I can select one.
+   7. As a transport user who wants to report problems I want to be able to describe the problem so that my transport operator can fix them.
+   8. As a transport user who selected a stop or station I want to be able to see who the transport operator is so that I can know to whom my report is being sent.
+
